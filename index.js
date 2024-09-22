@@ -14,6 +14,7 @@ async function main() {
   // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
 }
 
+app.use(express.json()); 
 
 app.use('/api/v1/user', userRouter);
 app.use('/api/v1/course', courseRouter);
